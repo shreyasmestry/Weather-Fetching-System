@@ -1,7 +1,8 @@
+import os
 import requests
 
-# Paste your working API key inside the quotes below
-API_KEY = "6e8e52dd0dcafd64675588f71165ffae"
+# This tells Python to fetch the key from your hidden .env file
+API_KEY = os.environ.get('OPENWEATHER_API_KEY')
 BASE_URL = "https://api.openweathermap.org/data/2.5/weather"
 
 def fetch_weather(city_name):

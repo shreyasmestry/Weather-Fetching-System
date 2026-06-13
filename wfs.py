@@ -1,7 +1,10 @@
 import os
 import requests
+from dotenv import load_dotenv
 
-# This tells Python to fetch the key from your hidden .env file
+# This physically loads the data from your hidden .env file into Python
+load_dotenv()
+
 API_KEY = os.environ.get('OPENWEATHER_API_KEY')
 BASE_URL = "https://api.openweathermap.org/data/2.5/weather"
 
